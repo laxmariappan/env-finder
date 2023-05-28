@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Env Finder",
+  "version": "0.1.0",
+  "description": "Check if a site is live or not",
+  "action": {
+    "default_icon": {
+      "16": "images/black-32.png",
+      "24": "images/black-32.png",
+      "32": "images/black-32.png",
+      "64": "images/black-64.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": ["tabs", "storage", "activeTab", "scripting"]
+}
